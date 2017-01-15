@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mockup-羅弘智</title>
+	<link rel="stylesheet" type="text/css" href="css/stylesheets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+    <script type="text/babel">//margin-left&right 3px;
+    	class ProductBox extends React.Component {
+    		constructor(props) {
+		        super(props);
+		        this.callback = this.callback.bind(this);
+		        this.state = {
+		            data: []
+		        }
+		    }
+    		callback(data) {
+				this.setState({data:data});
+			}
+    		loadItemsFromServer(url,callback){
+    			var request = new XMLHttpRequest();
+				request.open('GET', url, true);
+				request.onload = function() {
+				  if (request.status >= 200 && request.status < 400) {
+				    var data = JSON.parse(request.responseText);
+				    callback(data);
+				  } else {
+				    console.log('error');
+				  }
+				};
+				request.send();
+    		}
+    		componentDidMount(){
+				this.loadItemsFromServer('product-data.json',this.callback);
+    		}
+    		render(){
+    			var mainProduct,products=[];
+    			this.state.data.map(function(item,index){
+    				if(item.id===1){
+    					mainProduct = <Product index={item.id} src={item.src} slogan={item.slogan} name={item.name} price={item.price}/>;
+    				}else{
+    					products.push(<Product index={item.id} src={item.src} slogan={item.slogan} name={item.name} price={item.price}/>);
+    				}
+				}.bind(this));
+    			return(
+    				<div className="product-box">
+				       	<div className="-left">
+				      		{mainProduct}
+				      	</div>
+				      	<div className="-right">
+				      		{products}
+				      	</div>
+				    </div>
+    			);
+    		}
+    	}
+      	class Product extends React.Component {
+      		constructor(){
+      			super();
+      			this.handleOver= this.handleOver.bind(this);
+      			this.handleOut= this.handleOut.bind(this);
+      		}
+      		handleOver(){
+      			var index = this.props.index-1;
+      			document.getElementsByClassName("product-name")[index].style.textDecoration="underline";
+      			document.getElementsByClassName("product-name")[index].style.color="#6f6f6f";
+      		}
+      		handleOut(){
+      			var index = this.props.index-1;
+      			document.getElementsByClassName("product-name")[index].style.textDecoration="none";
+      			document.getElementsByClassName("product-name")[index].style.color="#000";
+      		}
+	    	render(){
+	    		var priceName=[];
+	      		if(this.props.index===1){
+	      			priceName.push(<span className="price-name">促銷價</span>);
+	      		}
+	    		return(
+	    			<div className="product" onMouseOver={this.handleOver.bind(this)} onMouseOut={this.handleOut.bind(this)}>
+	    				<img className="product-img" src={this.props.src}/>
+	    				<div className="text-box">
+	    					<p className="product-slogan">{this.props.slogan}</p>
+	    					<p className="product-name">{this.props.name}</p>
+	    				</div>
+	    				<div className="price-box">
+	    					{priceName}
+	    					<span className="product-price"><span className="price-icon">$</span>{this.props.price}</span>
+	    					<span className="product-btn">搶購</span>
+	    				</div>
+	    			</div>
+	    		);
+	    	}
+     	}
+        ReactDOM.render(<ProductBox />, document.getElementById('container'));
+    </script>
+</body>
+</html>

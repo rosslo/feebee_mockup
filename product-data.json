@@ -1,0 +1,65 @@
+[
+	{
+		"id":1,
+		"src":"images/product-1.png",
+		"slogan":"年度特惠 限量搶購",
+		"name":"日本Raycop 紫外線熱風除塵蹣機RP-100(黑色)",
+		"price":"20500"
+	},
+	{
+		"id":2,
+		"src":"images/product-2.png",
+		"slogan":"雙杯組隨行果汁機 只要$688",
+		"name":"ASUS New ZenPad 10 Z300M 10.1吋 四核平板",
+		"price":"1880"
+	},
+	{
+		"id":3,
+		"src":"images/product-3.png",
+		"slogan":"年度特惠 限量搶購",
+		"name":"Bodum丹麥 POUR OVE沖咖啡壺500ml",
+		"price":"1550"
+	},
+	{
+		"id":4,
+		"src":"images/product-4.png",
+		"slogan":"名牌墨鏡35折起",
+		"name":"Ionic-care 冰箱專用殺菌臭空氣淨化機(XJ-100)",
+		"price":"12690"
+	},
+	{
+		"id":5,
+		"src":"images/product-5.png",
+		"slogan":"雙杯組隨行果汁機 只要$688",
+		"name":"柯達 PIXPRO SP360 環景影機(公司貨)",
+		"price":"1490"
+	},
+	{
+		"id":6,
+		"src":"images/product-6.png",
+		"slogan":"雙杯組隨行果汁機 只要$688",
+		"name":"ASUS New ZenPad 10 Z300M 10.1吋 4核平板",
+		"price":"1880"
+	},
+	{
+		"id":7,
+		"src":"images/product-7.png",
+		"slogan":"年度特惠 限量搶購",
+		"name":"Bodum丹麥 POUR OVE沖咖啡壺500ml",
+		"price":"1550"
+	},
+	{
+		"id":8,
+		"src":"images/product-8.png",
+		"slogan":"名牌墨鏡35折起",
+		"name":"Ionic-care 冰箱專用殺菌臭空氣淨化機(XJ-100)",
+		"price":"12690"
+	},
+	{
+		"id":9,
+		"src":"images/product-9.png",
+		"slogan":"雙杯組隨行果汁機 只要$688",
+		"name":"柯達 PIXPRO SP360 環景影機(公司貨)",
+		"price":"1490"
+	}
+]

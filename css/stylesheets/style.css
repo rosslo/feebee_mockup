@@ -1,0 +1,152 @@
+/* Welcome to Compass.
+* In this file you should write your main styles. (or centralize your imports)
+* Import this file using the following HTML or equivalent:
+* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, ../sass/style.scss */
+body {
+  font-family: "Microsoft JhengHei";
+}
+
+/* line 12, ../sass/style.scss */
+#container {
+  padding: 7px 12px;
+  background-color: #aaa;
+}
+
+/* line 16, ../sass/style.scss */
+.product-box {
+  width: 100%;
+  border-right: 1px solid #aaa;
+  border-radius: 9px;
+  background-color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+/* line 25, ../sass/style.scss */
+.product-box .-left, .product-box .-right {
+  display: inline-block;
+  margin-right: -4px;
+  padding: 9px 6px;
+  box-sizing: border-box;
+  height: 100%;
+}
+/* line 32, ../sass/style.scss */
+.product-box .-left {
+  width: 33.33%;
+}
+/* line 34, ../sass/style.scss */
+.product-box .-left .product {
+  padding: 17px 0px 23px;
+}
+/* line 36, ../sass/style.scss */
+.product-box .-left .product .price-box {
+  text-align: right;
+}
+/* line 39, ../sass/style.scss */
+.product-box .-left .product .product-img {
+  width: 82%;
+  height: auto;
+}
+/* line 43, ../sass/style.scss */
+.product-box .-left .product .product-price {
+  font-size: 27px;
+  margin-right: 25px;
+}
+/* line 47, ../sass/style.scss */
+.product-box .-left .product .product-name {
+  font-size: 27px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+/* line 53, ../sass/style.scss */
+.product-box .-left .product .product-btn {
+  margin-right: 17px;
+}
+/* line 56, ../sass/style.scss */
+.product-box .-left .product .price-icon {
+  font-size: 21px;
+}
+/* line 59, ../sass/style.scss */
+.product-box .-left .product .price-name {
+  font-size: 18px;
+}
+/* line 64, ../sass/style.scss */
+.product-box .-right {
+  width: 66.66%;
+}
+/* line 66, ../sass/style.scss */
+.product-box .-right .product {
+  padding: 8px 8px 23px 10px;
+  width: 25%;
+  display: inline-block;
+  box-sizing: border-box;
+  border-bottom: 1px solid #aaa;
+}
+
+/* line 75, ../sass/style.scss */
+.product {
+  padding: 12px;
+  border-right: 1px solid #aaa;
+  background-color: #fff;
+}
+/* line 79, ../sass/style.scss */
+.product .product-img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 84, ../sass/style.scss */
+.product-slogan {
+  font-size: 15px;
+  color: #c00;
+  margin-top: 4px;
+}
+
+/* line 89, ../sass/style.scss */
+.product-name {
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* line 94, ../sass/style.scss */
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ef4141;
+  line-height: 31px;
+  margin-left: 3px;
+}
+
+/* line 101, ../sass/style.scss */
+.product-btn {
+  float: right;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background-color: #ef4141;
+  color: #fff;
+}
+
+/* line 108, ../sass/style.scss */
+.price-name {
+  margin-right: 12px;
+}
+
+/* line 111, ../sass/style.scss */
+.product:nth-child(4n+4) {
+  border-right: 0;
+}
+
+/* line 114, ../sass/style.scss */
+.product:nth-child(n+5) {
+  border-bottom: 0 !important;
+}
